@@ -7,5 +7,10 @@
     "name": "Geode RPC Test",
     "version": "v0.1.0",
     "developer": "DarkTubbie",
-    "description": "Minimal Geode Android test mod for the Discord Rich Presence project."
+    "description": "Minimal Geode Android test mod for the Discord Rich Presence project.",
+    "resources": {
+        "files": [
+            "resources/libdiscord_partner_sdk.so"
+        ]
+    }
 }
