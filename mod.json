@@ -1,12 +1,11 @@
 {
-    "geode": "5.0.0",
-    "version": "v0.1.0",
+    "geode": "v5.0.0",
+    "gd": {
+        "android": "2.2074"
+    },
     "id": "darktubbie.geode-rpc-test",
     "name": "Geode RPC Test",
+    "version": "v0.1.0",
     "developer": "DarkTubbie",
-    "description": "Minimal Geode Android test mod for the Discord Rich Presence project.",
-    "repository": "https://github.com/Darktubbie/Geode-RPC-test",
-    "tags": [
-        "utility"
-    ]
+    "description": "Minimal Geode Android test mod for the Discord Rich Presence project."
 }
