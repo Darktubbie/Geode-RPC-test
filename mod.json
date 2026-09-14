@@ -1,7 +1,7 @@
 {
-    "geode": "v5.10.1",
+    "geode": "$GEODE_VERSION",
     "gd": {
-        "android": "2.2074"
+        "android": "2.2081"
     },
     "id": "darktubbie.geode-rpc-test",
     "name": "Geode RPC Test",
