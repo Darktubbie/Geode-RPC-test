@@ -1,0 +1,42 @@
+name: Build Geode Android
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-android64:
+    name: Build Android64
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Geode CLI
+        shell: bash
+        run: |
+          set -e
+          curl -fsSL https://raw.githubusercontent.com/geode-sdk/cli/main/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Show Geode CLI version
+        run: geode --version
+
+      - name: Install Android64 Geode binaries
+        run: geode sdk install-binaries -p android64
+
+      - name: Build Android64 mod
+        run: geode build -p android64
+
+      - name: Upload Geode package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Geode-RPC-test-android64
+          path: |
+            build-android64/*.geode
+            build-android64/**/*.geode
+          if-no-files-found: error
